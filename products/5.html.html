@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+  <meta charset="UTF-8">
+  <title>طلب المنتج</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: 'Cairo', sans-serif;
+      direction: rtl;
+      background: #f2f4f8;
+      padding: 20px;
+    }
+    .container {
+      display: flex;
+      flex-wrap: wrap;
+      max-width: 1100px;
+      margin: auto;
+      background: white;
+      border-radius: 15px;
+      overflow: hidden;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    }
+    .product-info, .order-form {
+      flex: 1 1 50%;
+      padding: 30px;
+      min-width: 300px;
+    }
+    .product-info img {
+      width: 100%;
+      border-radius: 10px;
+      object-fit: cover;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    }
+    .product-description {
+      margin-top: 20px;
+    }
+    .product-description h2 {
+      color: #1f2d5a;
+      margin-bottom: 10px;
+      font-size: 24px;
+    }
+    .product-description p {
+      color: #444;
+      font-size: 18px;
+    }
+    .order-form h2 {
+      color: #1f2d5a;
+      margin-bottom: 20px;
+      font-size: 24px;
+    }
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+    input, textarea, button {
+      padding: 12px;
+      font-size: 16px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      outline: none;
+      transition: 0.3s ease;
+    }
+    textarea {
+      resize: vertical;
+    }
+    input:focus, textarea:focus {
+      border-color: #1f2d5a;
+    }
+    button {
+      background-color: #1f2d5a;
+      color: white;
+      font-weight: bold;
+      cursor: pointer;
+      border: none;
+    }
+    button:hover {
+      background: white;
+      color: #1f2d5a;
+      border: 2px solid #1f2d5a;
+    }
+    @media (max-width: 768px) {
+      .container {
+        flex-direction: column;
+        padding: 10px;
+      }
+      .product-info, .order-form {
+        padding: 20px 15px;
+      }
+      .product-description h2,
+      .order-form h2 {
+        font-size: 20px;
+      }
+      .product-description p {
+        font-size: 16px;
+      }
+    }
+  </style>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <div class="container">
+
+    <div class="product-info">
+      <img id="productImage" src="../img/WhatsApp Image 2025-04-29 at 11.49.49 PM.jpeg" alt="صورة المنتج">
+      <div class="product-description" id="productDescription">
+        <h2>  جهاز مشد الصدر النسائي + فازلين + مناديل مبلله مجانا + توصيل مجاني  بـ249 ر.س</h2>
+        <p>وصف المنتج</p>
+
+        <p>شكل جذاب - سهل الحمل - مريح في الاستخدام:
+          يستخدم هذا الجهاز لتحسين مظهر الصدر والحصول على ثديين متناسقين .. قولي وداعاً للترهلات مع جهاز مشد الصدر النسائي (Any time)!
+          مميزات الجهاز:
+          - يعمل على شد ومرونة ورفع الثدي.
+          - يزيد الدورة الدموية في الثدي.
+          - يجعل الثدي في حالة جيدة بصفة دائمة.
+          طريقة استخدام جهاز مشد الصدر:
+          - قومي بدهن صدرك لمدة 5 دقائق باستخدام الزيت الخاص بالجهاز والذي يوجد ضمن ملحقات الجهاز.
+          - لا غنىً عن الفازلين .. ضعي القليل منه على منطقة الصدر، ثم دلكي المنطقة وبعد ذلك قومي بتركيب الجهاز وتشغيله.
+          - اتركي الجهاز يعمل لمدة 10 - 15 دقيقة.
+          - عليكِ بتكرار هذه الخطوات مرتين في اليوم خلال الأسبوع الأول والثاني، ومرة واحدة في اليوم ابتداءً من الأسبوع الثالث.
+          
+          *تحذير:
+          حرصاً على سلامتك يمنع استخدام الجهاز للمرأة الحامل أو المرضعة أو المصابة بأمراض القلب المزمنة.</p>      </div>
+    </div>
+
+    <div class="order-form">
+      <h2>طلب المنتج</h2>
+      <form id="orderForm">
+        <input type="text" id="name" name="name" placeholder="اسمك الكامل" required>
+        <input type="tel" id="phone" name="phone" placeholder="رقم الجوال" required>
+        <textarea id="address" name="address" placeholder="العنوان الكامل" rows="3" required></textarea>
+        <input type="hidden" id="productName" name="productName" value="جهاز مشد الصدر النسائي + فازلين + مناديل مبلله مجانا + توصيل مجاني  بـ249 ر.س">
+        <button type="submit">إرسال الطلب عبر البريد</button>
+      </form>
+    </div>
+
+  </div>
+
+  <script>
+    document.getElementById('orderForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+      const name = document.getElementById('name').value;
+      const phone = document.getElementById('phone').value;
+      const address = document.getElementById('address').value;
+      const product = document.getElementById('productName').value;
+
+      const toEmail = "prestigetouch147@gmail.com";
+      const subject = encodeURIComponent("");
+      const body = `اسم العميل: ${name}\nرقم الجوال: ${phone}\nالعنوان: ${address}\nالمنتج المطلوب: ${product}`;
+
+      const gmailUrl = `https://mail.google.com/mail/?view=cm&fs=1&to=${toEmail}&su=${subject}&body=${encodeURIComponent(body)}`;
+      window.open(gmailUrl, '_blank');
+    });
+  </script>
+
+</body>
+</html>

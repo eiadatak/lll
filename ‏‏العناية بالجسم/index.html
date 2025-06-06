@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>prestige tauch | Online Store</title>
+
+    <!-- Link Swiper's CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+
+    <!-- File CSS -->
+    <link rel="stylesheet" href="../CSS/style.css">
+</head>
+<body>
+
+    <header>
+        <div class="top_header">
+            <div class="container">
+                <a href="../index.html" class="logo">
+                    <img src="../img/IMG-20250402-WA0001-removebg-preview.png" alt="">
+                </a>
+
+                <form class="search_box">
+                    <h1>welcome to prestige tauch | Online Store</h1>
+                </form>
+
+                <div class="header_icons"></div>
+            </div>
+        </div>
+
+        <div class="bottom_header">
+            <div class="container">
+                <nav class="nav">
+
+                    <span onclick="open_Menu()" class="open_menu"><i class="fa-solid fa-bars"></i></span>
+
+                    <div class="category_nav">
+                        <div onclick="Open_Categ_list()" class="category_btn">
+                            <i class="fa-solid fa-bars"></i>
+                            <p>المزيد</p>
+                            <i class="fa-solid fa-angle-down"></i>
+                        </div>
+                        <div class="category_nav_list">
+                            <a href="index.html">العروض</a>
+                            <a href="../العناية بالشعر/index.html">العناية بالشعر</a>
+                            <a href="../‏‏العناية بالجسم/index.html">العناية بالجسم</a>
+                        </div>
+                    </div>
+
+                    <ul class="nav_links">
+                        <span onclick="open_Menu()" class="close_menu"><i class="fa-regular fa-circle-xmark"></i></span>
+                        <li class="active"><a href="../العناية بالشعر/index.html">العناية بالشعر</a></li>
+                        <li><a href="../‏‏العناية بالجسم/index.html">العناية بالجسم</a></li>
+                    </ul>
+
+                </nav>
+
+                <div class="login_signup btns">
+                    <a href="../العناية بالشعر/index.html" class="btn">العناية بالشعر</a>
+                    <a href="../‏‏العناية بالجسم/index.html" class="btn">العناية بالجسم</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+
+    <div class="slider">
+        <div class="container">
+            <!-- Swiper -->
+            <div class="slide-swp mySwiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <a href="#"><img src="../img/wa.png" alt=""></a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="#"><img src="../img/2.jpg" alt=""></a>
+                    </div>
+                </div>
+                <div class="swiper-pagination"></div>
+            </div>
+
+            <div class="banner_2">
+                <a href="#"><img src="../img/banner_home3.jpg" alt=""></a>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="top_slide">
+        <h2><i class="fa-solid fa-tags"></i> منتجات العناية بالجسم</h2>
+    </div>
+
+    <div class="banners_4">
+        <div class="container">
+
+            <div class="box">
+                <a href="/products/3.html.html" class="link_btn"></a>
+                <img src="../img/WhatsApp Image 2025-04-29 at 11.49.49 PM.jpeg" alt="">
+                <div class="text">
+                    <h5> ثلاثه اجهزه من مشد الصدر النسائي + ثلاثه فازلين + ثلاثه مناديل مبلله مجانا + توصيل مجاني  </h5>
+                    <div class="sale">
+                        <p class="price-label">ريال سعودي</p>
+                        <span class="price-amount" data-amount="599">599</span>
+                    </div>
+                    <!-- <h6>السعر السابق 150 ر.س</h6> -->
+                </div>
+            </div>
+
+            <div class="box">
+                <a href="/products/4.html.html" class="link_btn"></a>
+                <img src="../img/WhatsApp Image 2025-04-29 at 11.49.49 PM.jpeg" alt="">
+                <div class="text">
+                    <h5> اثنين اجهزه من مشد الصدر النسائي + اثنين فازلين + اثنين مناديل مبلله مجانا + توصيل مجاني  </h5>
+                    <div class="sale">
+                        <p class="price-label">ريال سعودي</p>
+                        <span class="price-amount" data-amount="499">499</span>
+                    </div>
+                    <!-- <h6>السعر السابق 150 ر.س</h6> -->
+                </div>
+            </div>
+
+
+            <div class="box">
+                <a href="/products/5.html.html" class="link_btn"></a>
+                <img src="../img/WhatsApp Image 2025-04-29 at 11.49.49 PM.jpeg" alt="">
+                <div class="text">
+                    <h5> جهاز مشد الصدر النسائي + فازلين + مناديل مبلله مجانا + توصيل مجاني  </h5>
+                    <div class="sale">
+                        <p class="price-label">ريال سعودي</p>
+                        <span class="price-amount" data-amount="249">249</span>
+                    </div>
+                    <!-- <h6>السعر السابق 150 ر.س</h6> -->
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    
+    <script>
+    document.querySelectorAll('.faq-question').forEach(button => {
+        button.addEventListener('click', () => {
+            const faqAnswer = button.nextElementSibling;
+    
+            button.classList.toggle('active');
+    
+            if (faqAnswer.style.display === 'block') {
+                faqAnswer.style.display = 'none';
+            } else {
+                faqAnswer.style.display = 'block';
+            }
+        });
+    });
+    </script>
+    
+    <!-- Footer -->
+    <footer dir="rtl">
+        <div class="container">
+            <div class="big_row">
+                <h3> هنا في متجر بريستيج تاتش  نقدم افضل منتجات العنايه بالشعر والجمال عالية الجوده  التي تعزز من جمالك الطبيعي ونمنحك المظهر الذي تستحقه وتفخر به</h3>
+                <p>شاركنا رأيك على مواقع التواصل الاجتماعي الخاصة بنا</p>
+                <div class="icons_footer">
+                    <a href="https://www.facebook.com/share/14EdmbpSDQ7/"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="https://www.instagram.com/prestigetouch1?utm_source=qr&igsh=MWFlNHRmOWpqaHVqZg=="><i class="fa-brands fa-instagram"></i></a>
+                    <a href="https://x.com/BBrwksy18899?t=9G5IwniCWaiC1rwAhyoepA&s=09"><i class="fa-brands fa-x-twitter"></i></a>
+                </div>
+            </div>
+        </div>
+        <p>&copy; <span>Programmed by</span> Alhabib Software.</p>
+
+        <div class="bottom_footer">
+            <div class="container">
+
+
+                <div class="payment-accounts">
+                    <h3>💳 حسابات العمل الرسمية</h3>
+                    <div class="accounts-row">
+                        <div class="account">
+                            <p><strong>🏦 البنك:</strong> العمقي</p>
+                            <p><strong>💼 الاسم:</strong> اللمسة الثمينة للتجارة</p>
+                            <p><strong>🔢 الحساب:</strong> 254224699</p>
+                        </div>
+                        <div class="account">
+                            <p><strong>🏦 البنك:</strong> القطيبي</p>
+                            <p><strong>💼 الاسم:</strong> اللمسة الثمينة للتجارة</p>
+                            <p><strong>🔢 الحساب:</strong> 122614523</p>
+                        </div>
+                        <div class="account">
+                            <p><strong>🏦 البنك:</strong> الكريمي</p>
+                            <p><strong>💼 الاسم:</strong> اللمسة الثمينة للتجارة</p>
+                            <p><strong>🔢 الحساب:</strong> 3124245884</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <!-- File JS -->
+    <script src="JS/swiper.js"></script>
+    <script src="JS/items_home.js"></script>
+    <script src="JS/main.js"></script>
+
+    <!-- GeoIP Price/Contact Logic -->
+    <script>
+    fetch('https://ipinfo.io/json?token=b9f4569682b35c')
+    .then(response => response.json())
+    .then(data => {
+      const country = data.country;
+      const priceLabels = document.querySelectorAll('.price-label');
+      const priceAmounts = document.querySelectorAll('.price-amount');
+
+      priceAmounts.forEach((amount, index) => {
+        const original = amount.getAttribute('data-amount');
+        if (country === 'YE') {
+          // إذا من اليمن: عرض السعر مع العملة اليمنية
+          amount.innerText = original;
+          if (priceLabels[index]) {
+            priceLabels[index].innerText = 'ريال سعودي';
+          }
+        } else {
+          // إذا من دول أخرى: عرض رقم الجوال
+          amount.innerText = "تواصل معنا عبر الارقام التاليه +967 775 577 577 ";
+          if (priceLabels[index]) {
+            priceLabels[index].style.display = 'none';
+          }
+        }
+      });
+    })
+    .catch(err => console.error('خطأ في تحديد الدولة:', err));
+    </script>
+
+</body>
+</html>
